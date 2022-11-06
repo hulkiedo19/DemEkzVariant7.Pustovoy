@@ -1,0 +1,118 @@
+﻿<Window x:Class="DemEkzVariant7.Pustovoy.Views.AgentsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DemEkzVariant7.Pustovoy.Views"
+        mc:Ignorable="d"
+        Title="AgentsWindow" 
+        Height="480" 
+        Width="500"
+        ResizeMode="NoResize" 
+        Closing="Window_Closing">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel
+            Grid.Column="0"
+            Orientation="Vertical"
+            Margin="10, 10, 10, 0"
+            VerticalAlignment="Top">
+            <TextBlock 
+                Text="Title"/>
+            <TextBox
+                x:Name="TB_Title"/>
+
+            <TextBlock 
+                Text="AgentType"/>
+            <ComboBox 
+                x:Name="CB_AgentType"
+                IsEditable="True"
+                IsReadOnly="True"
+                Text="Select Agent Type"/>
+
+            <TextBlock 
+                Text="Address"/>
+            <TextBox
+                x:Name="TB_Address"/>
+
+            <TextBlock 
+                Text="Inn"/>
+            <TextBox
+                x:Name="TB_Inn"/>
+
+            <TextBlock 
+                Text="Kpp"/>
+            <TextBox
+                x:Name="TB_Kpp"/>
+
+            <TextBlock 
+                Text="Director Name"/>
+            <TextBox
+                x:Name="TB_Director"/>
+
+            <TextBlock 
+                Text="Phone"/>
+            <TextBox
+                x:Name="TB_Phone"/>
+
+            <TextBlock 
+                Text="Email"/>
+            <TextBox
+                x:Name="TB_Email"/>
+
+            <TextBlock 
+                Text="Logo"/>
+            <TextBox
+                x:Name="TB_Logo"/>
+
+            <TextBlock 
+                Text="Priority"/>
+            <TextBox
+                x:Name="TB_Priority"/>
+
+            <Button
+                x:Name="AddButton"
+                Content="Add"
+                Click="ButtonAdd_Click"
+                Margin="0, 10, 0, 0"/>
+            <Button
+                x:Name="SaveButton"
+                Content="Save"
+                Click="ButtonSave_Click"
+                Margin="0, 10, 0, 0"/>
+            <Button
+                x:Name="DeleteButton"
+                Content="Delete"
+                Click="ButtonDelete_Click"
+                Margin="0, 10, 0, 0"/>
+        </StackPanel>
+
+        <StackPanel
+            Grid.Column="1"
+            VerticalAlignment="Top"
+            Orientation="Vertical"
+            Margin="10, 10, 10, 0">
+
+            <TextBlock
+                Text="Products:"/>
+            <ListBox
+                x:Name="LB_Products"
+                SelectionMode="Multiple"
+                Height="150"/>
+
+            <TextBlock 
+                Text="Sales:"/>
+            <TextBox
+                x:Name="TB_Sales"/>
+
+            <TextBlock 
+                Text="Date"/>
+            <DatePicker 
+                x:Name="SaleDatePicker"/>
+        </StackPanel>
+    </Grid>
+</Window>
